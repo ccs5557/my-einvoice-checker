@@ -142,10 +142,10 @@ export function Quiz() {
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-12 px-4">
+    <div className="min-h-screen pt-24 pb-12 px-4 flex flex-col">
       <motion.div
         layout
-        className="max-w-lg mx-auto glass-card rounded-3xl p-6 sm:p-8"
+        className="max-w-lg w-full glass-card rounded-3xl p-6 sm:p-8 mx-auto my-auto"
       >
         <AnimatePresence mode="wait">
           {step === 'start' && (

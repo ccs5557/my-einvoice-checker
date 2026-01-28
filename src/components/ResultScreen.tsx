@@ -159,7 +159,7 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
           <ExternalLink className="w-4 h-4" />
         </a>
         <p className="text-primary-200 text-xs mt-4">
-          {t('ctaCredit')}: <span className="font-semibold">Your Brand</span>
+          {t('ctaCredit')}: <span className="font-semibold">CCS</span>
         </p>
       </motion.div>
 
