@@ -5,7 +5,6 @@ import {
   XCircle,
   MessageCircle,
   RotateCcw,
-  ExternalLink,
 } from 'lucide-react';
 import { RiskMeter } from './RiskMeter';
 import type { ComplianceResult } from '../types/quiz';
@@ -152,11 +151,10 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-white text-primary-700 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-primary-50 active:scale-[0.98] transition-all duration-200 cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 font-semibold px-4 sm:px-6 py-3 rounded-xl shadow-lg hover:bg-primary-50 active:scale-[0.98] transition-all duration-200 cursor-pointer text-sm sm:text-base whitespace-nowrap"
         >
-          <MessageCircle className="w-5 h-5" />
-          {t('ctaButton')}
-          <ExternalLink className="w-4 h-4" />
+          <MessageCircle className="w-5 h-5 flex-shrink-0" />
+          <span>{t('ctaButton')}</span>
         </a>
         <p className="text-primary-200 text-xs mt-4">
           {t('ctaCredit')}: <span className="font-semibold">CCS</span>
