@@ -93,6 +93,11 @@ export const translations = {
     ctaButton: 'WhatsApp Me for a Demo',
     ctaCredit: 'Built by',
 
+    // Risk Meter Labels
+    meterLow: 'Not Required',
+    meterMid: 'Prepare',
+    meterHigh: 'Action Required',
+
     // Footer
     disclaimer: 'Disclaimer: This tool provides general guidance only. Please consult LHDN or a tax professional for specific advice.',
     restartQuiz: 'Take Quiz Again',
@@ -188,6 +193,11 @@ export const translations = {
     ctaDesc: '这个互动工具展示了如何通过吸引人的计算器和问卷为您的业务获取优质潜在客户。',
     ctaButton: 'WhatsApp 联系我',
     ctaCredit: '开发者',
+
+    // Risk Meter Labels
+    meterLow: '暂不需要',
+    meterMid: '准备',
+    meterHigh: '需行动',
 
     // Footer
     disclaimer: '免责声明：此工具仅提供一般指导。具体建议请咨询LHDN或税务专业人士。',

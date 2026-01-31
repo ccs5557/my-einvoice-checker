@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import type { RiskLevel } from '../types/quiz';
 import { getRiskColor } from '../utils/complianceLogic';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface RiskMeterProps {
   riskLevel: RiskLevel;
@@ -9,6 +10,7 @@ interface RiskMeterProps {
 
 export function RiskMeter({ riskLevel, riskScore }: RiskMeterProps) {
   const colors = getRiskColor(riskLevel);
+  const { t } = useLanguage();
 
   return (
     <div className="w-full">
@@ -39,9 +41,9 @@ export function RiskMeter({ riskLevel, riskScore }: RiskMeterProps) {
 
       {/* Labels */}
       <div className="flex justify-between text-xs text-slate-500">
-        <span>Not Required</span>
-        <span>Prepare</span>
-        <span>Action Required</span>
+        <span>{t('meterLow')}</span>
+        <span>{t('meterMid')}</span>
+        <span>{t('meterHigh')}</span>
       </div>
     </div>
   );
