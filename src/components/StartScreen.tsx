@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Clock, FileCheck } from 'lucide-react';
+import { ArrowRight, Shield, Clock, FileCheck, BadgeCheck } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 interface StartScreenProps {
@@ -95,6 +95,17 @@ export function StartScreen({ onStart }: StartScreenProps) {
       >
         {t('freeNote')}
       </motion.p>
+
+      {/* Version Badge - Trust Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.7 }}
+        className="mt-4 inline-flex items-start gap-1.5 text-xs text-slate-400"
+      >
+        <BadgeCheck className="w-3.5 h-3.5 text-primary-500 flex-shrink-0 mt-0.5" />
+        <span>{t('versionInfo')} • {t('guidelineVersion')}</span>
+      </motion.div>
     </motion.div>
   );
 }

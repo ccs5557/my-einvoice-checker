@@ -7,6 +7,8 @@ export const translations = {
     subtitle: 'Compliance Checker',
     badge: 'Updated 2026',
     lhdnRules: 'Based on LHDN 2026 Rules',
+    versionInfo: 'Updated: January 2026',
+    guidelineVersion: 'Per LHDN e-Invoice Guidelines v2.1',
 
     // Start Screen
     welcomeTitle: 'Check Your e-Invoicing Status',
@@ -32,10 +34,12 @@ export const translations = {
     q2Desc: 'Select your registered business structure.',
     q2Opt1: 'Sole Proprietorship',
     q2Opt1Desc: 'Individual business owner',
-    q2Opt2: 'Sdn Bhd / Partnership',
-    q2Opt2Desc: 'Registered company',
-    q2Opt3: 'Freelancer',
-    q2Opt3Desc: 'Self-employed individual',
+    q2Opt2: 'Enterprise',
+    q2Opt2Desc: 'Trading / Services / Others',
+    q2Opt3: 'Sdn Bhd / Partnership',
+    q2Opt3Desc: 'Registered company',
+    q2Opt4: 'Freelancer',
+    q2Opt4Desc: 'Self-employed individual',
 
     // Q3: Invoicing Method
     q3Title: 'How do you currently handle invoicing?',
@@ -54,31 +58,34 @@ export const translations = {
 
     // Results
     resultsTitle: 'Your Compliance Assessment',
-    riskLevel: 'Risk Level',
+    statusLabel: 'Your Status',
 
-    // Risk Levels
-    lowRisk: 'Low Risk',
-    lowRiskDesc: 'Good news! Based on your answers, you may qualify for exemptions or deferred requirements under the 2026 LHDN relief measures for businesses with turnover below RM 1M.',
+    // Status Levels
+    lowRisk: 'Not Required (For Now)',
+    lowRiskDesc: 'Good news! Based on your answers, you may qualify for exemptions or deferred requirements under the 2026 LHDN relief measures. Keep monitoring for updates.',
 
-    mediumRisk: 'Medium Risk',
-    mediumRiskDesc: 'Your business falls into a transitional category. While you may have some flexibility, it\'s recommended to prepare for e-invoicing compliance soon.',
+    mediumRisk: 'Prepare Now',
+    mediumRiskDesc: 'Your business should start preparing for e-invoicing. While you may have some flexibility, it\'s wise to evaluate solutions and plan your transition.',
 
-    highRisk: 'High Risk',
-    highRiskDesc: 'Your business likely needs to comply with e-invoicing requirements. Immediate action is recommended to avoid penalties and ensure smooth operations.',
+    highRisk: 'Action Required',
+    highRiskDesc: 'Your business needs to comply with e-invoicing requirements. Start your implementation now to ensure smooth operations and avoid last-minute rush.',
 
     // Recommendations
-    recommendationsTitle: 'Recommended Actions',
-    rec1Low: 'Monitor LHDN announcements for updates',
-    rec2Low: 'Keep business records organized',
-    rec3Low: 'Consider voluntary early adoption',
+    recommendationsTitle: 'Recommended Next Steps',
+    rec1Low: 'Keep monitoring LHDN announcements for any policy changes',
+    rec2Low: 'Organize your business records (income, expenses, receipts)',
+    rec3Low: 'Re-check your status if annual turnover increases',
 
-    rec1Med: 'Start evaluating e-invoicing solutions',
-    rec2Med: 'Consult with your accountant',
-    rec3Med: 'Plan for system integration',
+    rec1Med: 'Prepare basic business info (SSM registration, address, contact)',
+    rec2Med: 'List all transaction types you issue (invoice / receipt / quotation)',
+    rec3Med: 'Discuss your implementation timeline with your accountant',
+    rec4Med: 'Research e-Invoice platforms that suit your business needs',
 
-    rec1High: 'Register with MyInvois portal immediately',
-    rec2High: 'Implement compliant invoicing software',
-    rec3High: 'Train staff on e-invoicing procedures',
+    rec1High: 'Register on MyInvois Portal (portal.hasil.gov.my) now',
+    rec2High: 'Prepare business info: SSM number, address, contact details',
+    rec3High: 'List all transaction types: invoices, receipts, credit/debit notes',
+    rec4High: 'Choose your method: MyInvois portal / POS system / accounting software',
+    rec5High: 'Set your implementation date with your accountant',
 
     // CTA
     ctaTitle: 'Need a Custom Lead Magnet Like This?',
@@ -96,6 +103,8 @@ export const translations = {
     subtitle: '合规检查器',
     badge: '2026年更新',
     lhdnRules: '依据 LHDN 2026 法规',
+    versionInfo: '更新于：2026年1月',
+    guidelineVersion: '依据 LHDN 电子发票指南 v2.1',
 
     // Start Screen
     welcomeTitle: '检查您的电子发票状态',
@@ -121,10 +130,12 @@ export const translations = {
     q2Desc: '选择您注册的企业结构。',
     q2Opt1: '独资经营',
     q2Opt1Desc: '个人企业主',
-    q2Opt2: 'Sdn Bhd / 合伙企业',
-    q2Opt2Desc: '注册公司',
-    q2Opt3: '自由职业者',
-    q2Opt3Desc: '自雇人士',
+    q2Opt2: 'Enterprise 企业',
+    q2Opt2Desc: '贸易 / 服务 / 其他',
+    q2Opt3: 'Sdn Bhd / 合伙企业',
+    q2Opt3Desc: '注册公司',
+    q2Opt4: '自由职业者',
+    q2Opt4Desc: '自雇人士',
 
     // Q3: Invoicing Method
     q3Title: '您目前如何处理发票？',
@@ -143,31 +154,34 @@ export const translations = {
 
     // Results
     resultsTitle: '您的合规评估',
-    riskLevel: '风险等级',
+    statusLabel: '您的状态',
 
-    // Risk Levels
-    lowRisk: '低风险',
-    lowRiskDesc: '好消息！根据您的回答，您可能符合2026年LHDN对营业额低于RM 100万企业的豁免或延期要求。',
+    // Status Levels
+    lowRisk: '暂不需要',
+    lowRiskDesc: '好消息！根据您的回答，您可能符合2026年LHDN的豁免或延期要求。请持续关注最新公告。',
 
-    mediumRisk: '中等风险',
-    mediumRiskDesc: '您的企业处于过渡阶段。虽然可能有一定灵活性，但建议尽快准备电子发票合规。',
+    mediumRisk: '建议准备',
+    mediumRiskDesc: '您的企业应该开始准备电子发票。虽然可能有一定灵活性，但建议尽早评估方案并规划过渡。',
 
-    highRisk: '高风险',
-    highRiskDesc: '您的企业可能需要遵守电子发票要求。建议立即采取行动以避免罚款并确保业务顺利运营。',
+    highRisk: '需要行动',
+    highRiskDesc: '您的企业需要遵守电子发票要求。请立即开始实施，确保业务顺利运营，避免临时赶工。',
 
     // Recommendations
-    recommendationsTitle: '建议行动',
-    rec1Low: '关注LHDN公告更新',
-    rec2Low: '保持业务记录整齐',
-    rec3Low: '考虑自愿提前采用',
+    recommendationsTitle: '建议下一步',
+    rec1Low: '持续关注 LHDN 公告，留意政策变化',
+    rec2Low: '整理业务记录（收入、支出、收据）',
+    rec3Low: '若年营业额增加，请重新检查您的状态',
 
-    rec1Med: '开始评估电子发票解决方案',
-    rec2Med: '咨询您的会计师',
-    rec3Med: '规划系统集成',
+    rec1Med: '准备基本商业资料（SSM 注册号、地址、联系方式）',
+    rec2Med: '列出所有交易类型（发票 / 收据 / 报价单）',
+    rec3Med: '与会计师讨论实施时间表',
+    rec4Med: '研究适合您业务的电子发票平台',
 
-    rec1High: '立即在 MyInvois 门户注册',
-    rec2High: '实施合规的发票软件',
-    rec3High: '培训员工电子发票流程',
+    rec1High: '立即在 MyInvois 门户注册 (portal.hasil.gov.my)',
+    rec2High: '准备商业资料：SSM 号码、地址、联系方式',
+    rec3High: '列出所有交易类型：发票、收据、贷记/借记单',
+    rec4High: '选择方式：MyInvois 门户 / POS 系统 / 会计软件',
+    rec5High: '与会计师确定实施日期',
 
     // CTA
     ctaTitle: '需要这样的定制营销工具吗？',

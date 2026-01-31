@@ -1,5 +1,5 @@
 export type TurnoverCategory = 'below150k' | '150kTo1m' | 'above1m';
-export type EntityType = 'soleProprietor' | 'sdnBhd' | 'freelancer';
+export type EntityType = 'soleProprietor' | 'enterprise' | 'sdnBhd' | 'freelancer';
 export type InvoicingMethod = 'manual' | 'basicSoftware' | 'none';
 export type RiskLevel = 'low' | 'medium' | 'high';
 

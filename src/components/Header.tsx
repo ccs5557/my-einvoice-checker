@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { Globe, FileCheck } from 'lucide-react';
+import { FileCheck } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export function Header() {
@@ -43,18 +43,16 @@ export function Header() {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="hidden sm:inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-              {t('badge')}
-            </span>
-
             <button
               onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
+              className="flex items-center gap-0.5 px-1 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
               aria-label="Toggle language"
             >
-              <Globe className="w-4 h-4 text-slate-600" />
-              <span className="text-sm font-medium text-slate-700">
-                {language === 'en' ? '中文' : 'EN'}
+              <span className={`px-2 py-0.5 rounded-md text-sm font-medium transition-colors ${language === 'zh' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-400'}`}>
+                中
+              </span>
+              <span className={`px-2 py-0.5 rounded-md text-sm font-medium transition-colors ${language === 'en' ? 'bg-white text-primary-600 shadow-sm' : 'text-slate-400'}`}>
+                EN
               </span>
             </button>
           </div>

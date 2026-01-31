@@ -107,16 +107,22 @@ export function Quiz() {
       descKey: 'q2Opt1Desc',
     },
     {
-      value: 'sdnBhd',
-      icon: <Building className="w-6 h-6" />,
+      value: 'enterprise',
+      icon: <Users className="w-6 h-6" />,
       titleKey: 'q2Opt2',
       descKey: 'q2Opt2Desc',
     },
     {
-      value: 'freelancer',
-      icon: <Users className="w-6 h-6" />,
+      value: 'sdnBhd',
+      icon: <Building className="w-6 h-6" />,
       titleKey: 'q2Opt3',
       descKey: 'q2Opt3Desc',
+    },
+    {
+      value: 'freelancer',
+      icon: <User className="w-6 h-6" />,
+      titleKey: 'q2Opt4',
+      descKey: 'q2Opt4Desc',
     },
   ];
 

@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import {
   CheckCircle,
-  AlertTriangle,
-  XCircle,
+  Clock,
+  PlayCircle,
   MessageCircle,
   RotateCcw,
 } from 'lucide-react';
@@ -20,14 +20,14 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
   const { t, language } = useLanguage();
   const colors = getRiskColor(result.riskLevel);
 
-  const getRiskIcon = () => {
+  const getStatusIcon = () => {
     switch (result.riskLevel) {
       case 'low':
         return <CheckCircle className="w-8 h-8" />;
       case 'medium':
-        return <AlertTriangle className="w-8 h-8" />;
+        return <Clock className="w-8 h-8" />;
       case 'high':
-        return <XCircle className="w-8 h-8" />;
+        return <PlayCircle className="w-8 h-8" />;
     }
   };
 
@@ -84,12 +84,12 @@ export function ResultScreen({ result, onRestart }: ResultScreenProps) {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className={`${colors.bg} rounded-2xl p-6 mb-6 border border-${result.riskLevel === 'low' ? 'emerald' : result.riskLevel === 'medium' ? 'amber' : 'red'}-200`}
+        className={`${colors.bg} rounded-2xl p-6 mb-6 border border-${result.riskLevel === 'low' ? 'emerald' : result.riskLevel === 'medium' ? 'amber' : 'orange'}-200`}
       >
         <div className="flex items-center gap-4 mb-4">
-          <div className={`${colors.text}`}>{getRiskIcon()}</div>
+          <div className={`${colors.text}`}>{getStatusIcon()}</div>
           <div>
-            <p className="text-sm text-slate-600 mb-1">{t('riskLevel')}</p>
+            <p className="text-sm text-slate-600 mb-1">{t('statusLabel')}</p>
             <h3 className={`font-display text-2xl font-bold ${colors.text}`}>
               {getRiskLabel()}
             </h3>

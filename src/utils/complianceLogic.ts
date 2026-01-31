@@ -32,6 +32,9 @@ export function calculateComplianceRisk(answers: QuizAnswers): ComplianceResult 
     case 'soleProprietor':
       riskScore += 10; // Moderate
       break;
+    case 'enterprise':
+      riskScore += 15; // Enterprise - common business structure
+      break;
     case 'sdnBhd':
       riskScore += 20; // Higher compliance expectations
       break;
@@ -78,9 +81,9 @@ function getRecommendationKeys(riskLevel: RiskLevel): string[] {
     case 'low':
       return ['rec1Low', 'rec2Low', 'rec3Low'];
     case 'medium':
-      return ['rec1Med', 'rec2Med', 'rec3Med'];
+      return ['rec1Med', 'rec2Med', 'rec3Med', 'rec4Med'];
     case 'high':
-      return ['rec1High', 'rec2High', 'rec3High'];
+      return ['rec1High', 'rec2High', 'rec3High', 'rec4High', 'rec5High'];
   }
 }
 
@@ -92,6 +95,7 @@ export function getRiskColor(riskLevel: RiskLevel): {
 } {
   switch (riskLevel) {
     case 'low':
+      // Not Required (For Now) - Green, relaxed
       return {
         bg: 'bg-emerald-50',
         text: 'text-emerald-700',
@@ -99,6 +103,7 @@ export function getRiskColor(riskLevel: RiskLevel): {
         meterColors: ['bg-emerald-500', 'bg-gray-200', 'bg-gray-200'],
       };
     case 'medium':
+      // Prepare Now - Amber, attention
       return {
         bg: 'bg-amber-50',
         text: 'text-amber-700',
@@ -106,11 +111,12 @@ export function getRiskColor(riskLevel: RiskLevel): {
         meterColors: ['bg-amber-500', 'bg-amber-500', 'bg-gray-200'],
       };
     case 'high':
+      // Action Required - Orange, urgent but not scary
       return {
-        bg: 'bg-red-50',
-        text: 'text-red-700',
-        gradient: 'from-red-400 to-red-600',
-        meterColors: ['bg-red-500', 'bg-red-500', 'bg-red-500'],
+        bg: 'bg-orange-50',
+        text: 'text-orange-700',
+        gradient: 'from-orange-500 to-red-500',
+        meterColors: ['bg-orange-500', 'bg-orange-500', 'bg-orange-500'],
       };
   }
 }
